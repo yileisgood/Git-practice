@@ -4,6 +4,7 @@ clf = tree.DecisionTreeClassifier()
 
 # CHALLENGE - create 3 more classifiers...
 # 1
+randf = tree.ExtraTreeClassifier()
 # 2
 # 3
 
