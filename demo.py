@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 clf = tree.DecisionTreeClassifier()
-
+from sklearn.metrics import accuracy_score
 # CHALLENGE - create 3 more classifiers...
 # 1
 randf = RandomForestClassifier()
@@ -27,9 +27,10 @@ svm = svm .fit(X,Y)
 neural = neural.fit(X,Y)
 
 prediction = clf.predict([[190, 70, 43]])
-print('Random:',randf.predict([[190, 70, 43]]),'\n',
-      'Neural:',neural.predict([[190, 70, 43]]),'\n',
-      'SVM:',svm.predict([[190, 70, 43]]),'\n')
+print('Random:',randf.predict([[190, 70, 43]]),accuracy_score(Y,randf.predict(X)),'\n',
+      'Neural:',neural.predict([[190, 70, 43]]),accuracy_score(Y,neural.predict(X)),'\n',
+      'SVM:',svm.predict([[190, 70, 43]]),accuracy_score(Y,svm.predict(X),'\n'))
 # CHALLENGE compare their reusults and print the best onek!
 
 print(prediction)
+print()
